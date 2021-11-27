@@ -1,26 +1,24 @@
-class Amazon{
+package com.xworkz.shoopingapps;
 
-  public static void main(String a[]){
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-   String types[]={"Series","Movies"};
-   String amazonSeries[]={"Mumbai Diaries 26/11","UTOPIA","Mirzapur","The Boys","Manifest","Tandav","Hostel Daze","Family Man","The Expanse","Panchayat","Madern Love","FourMoreShots","RunAways","Made in Heaven","Patal Lok"};
-   String amazonMovies[]={"Pagal","SherSha","Master","Karnan","Penguin","Narappa","V","HIT","Cinderella","Tenet","Robert","Nota","Action","Bhoot","Dia"};
-  
-	System.out.println(types.length);
-	System.out.println(amazonSeries.length);
-	System.out.println(amazonMovies.length);
+public class Amazon {
 
-		for(int p=0; p<types.length; p++){
-		System.out.println(types[p]);
-		}
+	public static void main(String[] args) {
 
-		for(int q=0; q<amazonSeries.length; q++){
-		System.out.println(amazonSeries[q]);
-		}
+//				System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Desktop\\Selenium Files\\Chrome Driver Files");
 
-		for(int k=0; k<amazonMovies.length; k++){
-		System.out.println(amazonMovies[k]);
-		}
+				WebDriver driver = new ChromeDriver();
+				
+				System.out.println("Chrome loaded");
+				
+				driver.manage().window().maximize();
+				
+				driver.get("https://www.amazon.in/?&ext_vrnc=hi&tag=googhydrabk1-21&ref=pd_sl_7hz2t19t5c_e&adgrpid=58355126069&hvpone=&hvptwo=&hvadid=486386870127&hvpos=&hvnetw=g&hvrand=4986175491460670870&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007768&hvtargid=kwd-10573980&hydadcr=14453_2154373&gclid=Cj0KCQiAy4eNBhCaARIsAFDVtI0aut8pBZBTnhVjq6mlALKljAVb70_YuQglv2vQr195j-sli-nCw-MaAi0bEALw_wcB");
+				
+				driver.close();
+
 
 	}
 
