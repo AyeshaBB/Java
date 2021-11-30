@@ -1,13 +1,16 @@
 package com.xworkz.locatorsprograms;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LinkdInApp {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		WebDriver lkdin = new ChromeDriver();
 		lkdin.manage().window().maximize();
@@ -27,6 +30,11 @@ public class LinkdInApp {
 		WebElement loginField = lkdin.findElement(logIn);
 		loginField.click();
 		
+//		Thread.sleep(2000);
+		TimeUnit.SECONDS.sleep(10);
+		
+//		implicitlyWait();
+	
 		lkdin.get("https://www.linkedin.com/home");
 		
 		By frgotPasswrd = By.partialLinkText("Forgot");
